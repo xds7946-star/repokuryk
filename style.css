@@ -1,0 +1,790 @@
+/* Змінні */
+:root {
+    --accent-dark: linear-gradient(180deg, #4f4f5e, #4f4f5e);
+    --text-color: #ffffff;
+    --blur-bg: rgba(74, 78, 88, 0.7);
+}
+
+/* Базові стилі */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* Тіло */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url("photos2/mainpagephoto.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: var(--text-color);
+    text-align: center;
+    font-family: 'Brush Script MT', cursive;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Розмиті блоки */
+.blur, .footer-blur {
+    width: 95%;
+    max-width: 1000px;
+    backdrop-filter: none;
+    background-color: var(--blur-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1.5rem auto ;
+}
+
+/* Хедер */
+.site-header {
+    font-size: 1.3rem;
+    background: var(--accent-dark);
+    color: #fff;
+    padding: 0.7rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 6px solid #f0f0f0;
+    width: 100%;
+}
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+.logo {
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 0 transparent;
+    font-size: 1.4rem;
+}
+
+.main-nav a.active {
+    border-bottom: 3px solid #fff;
+    padding-bottom: 4px;
+}
+
+.main-nav a:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.main-nav a:hover {
+    opacity: 0.8;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    background-color: rgba(74, 78, 88, 0.8);
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1.7rem;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    transition: box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Вступ */
+.hero h1 {
+    font-size: 2.7rem;
+    margin: 1rem 0;
+}
+
+.hero p {
+    font-size: 2.2rem;
+    margin: 1rem 0;
+}
+
+/* Сітка */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+/* Карточки */
+.card {
+    background-color: rgba(74, 78, 88, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card h1 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.9rem;
+}
+
+.card p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Футер */
+.site-footer {
+    background: var(--accent-dark);
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 6px solid #f0f0f0;
+}
+
+.small-footer {
+    padding: 1.5rem;
+}
+
+.footer-blur {
+    background-color: var(--blur-bg);
+    padding: 1.5rem;
+}
+
+.footer-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+/* Картинки услуг */
+.card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* Аватары клиентов */
+.client-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Текст */
+h1 {
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+
+p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Списки */
+ul, ol {
+    margin: 1rem auto;
+    padding: 0 2rem;
+    text-align: left;
+    display: inline-block;
+}
+
+li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+
+
+.services h1 {
+    font-size: 2.6rem;
+    margin: 1 0;
+}
+/* Текст зменшеної важливості */
+.muted {
+    opacity: 0.85;
+    font-size: 1rem;
+}
+
+/* Галерея */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    aspect-ratio: 1 / 1;
+    display: block;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Майстри */
+.master-card {
+    background-color: rgba(74, 78, 88, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.master-card:hover {
+    transform: translateY(-5px);
+}
+
+.master-card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.master-card h1 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.8rem;
+}
+
+.master-card p {
+    font-size: 1.4rem;
+    margin: 0.3rem 0;
+}
+
+.master-card .view-work {
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: #d4af37;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.master-card:hover .view-work {
+    color: #f0e68c;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: rgba(50, 50, 60, 0.95);
+    margin: 5% auto;
+    padding: 2rem;
+    border: 2px solid #d4af37;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+.close {
+    color: #d4af37;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #f0e68c;
+}
+
+#masterName {
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Предпросмотр майстров */
+.master-preview-card {
+    background-color: rgba(74, 78, 88, 0.8);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.master-preview-card .btn {
+    background-color: rgba(74, 78, 88, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    margin-top: auto;
+}
+
+.master-preview-card .btn:hover {
+    border-color: #ffffff;
+}
+
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+.master-preview-card .btn::after {
+    content: "";
+    position: absolute;
+    left: 15%;
+    bottom: -6px;
+    width: 70%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.7);
+     display: none; /* убираем линию полностью */
+}
+
+.master-preview-card .btn:hover::after {
+    background-color: #ffffff;
+}
+.card-link:hover {
+    color: inherit;
+}
+
+.master-preview-img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.master-preview-card h3 {
+    font-size: 1.9rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.master-preview-card p {
+    font-size: 1.5rem;
+    margin: 0.3rem 0;
+}
+
+.btn-view-work {
+    display: inline-block;
+    background-color: rgba(212, 175, 55, 0.3);
+    color: #d4af37;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    text-decoration: none;
+    margin-top: 0.8rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #d4af37;
+}
+
+.btn-view-work:hover {
+    background-color: rgba(212, 175, 55, 0.5);
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+.palette-section .blur {
+    background-color: var(--blur-bg);
+}
+
+.palette-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.gallery-section .blur {
+    background-color: var(--blur-bg);
+}
+
+.section-description {
+    font-size: 2rem;
+    margin: 1rem 0;
+    opacity: 0.9;
+}
+
+
+
+/* Обладнання */
+.equipment-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.equipment-list li {
+    background-color: rgba(74, 78, 88, 0.8);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.equipment-list h1 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.equipment-list p {
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+}
+
+
+
+/* Адаптивність */
+@media (max-width: 992px) {
+    .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+    
+    .blur, .footer-blur {
+        width: 90%;
+        padding: 1rem;
+        margin: 1rem auto;
+    }
+    
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+    
+    .offers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .container {
+        padding: 0 0.5rem;
+    }
+    
+    .card {
+        padding: 1rem;
+    }
+    
+    .card-image {
+        height: 140px;
+    }
+    
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0.5rem;
+    }
+    
+    .main-nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+    }
+    
+    .main-nav a {
+        padding: 0.5rem 0;
+        
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+
+    .card p {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        font-size: 1.1rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Сторінки окремих майстрів */
+.master-detail {
+    margin-top: 2rem;
+}
+
+.master-detail-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.master-detail h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #df98fc;
+}
+
+.master-spec,
+.master-exp,
+.master-contact {
+    font-size: 1.1rem;
+    margin: 0.8rem 0;
+}
+
+.master-portfolio {
+    margin-top: 2rem;
+}
+
+.master-portfolio h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.booking-section {
+    margin-bottom: 2rem;
+}
+
+.booking-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Сторінка палітри */
+.palette-main {
+    margin-top: 2rem;
+}
+
+.palette-main-img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    margin: 0 auto;
+    
+}
+
+.palette-samples {
+    margin-top: 2rem;
+}
+
+.palette-samples h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.palette-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.palette-item {
+    overflow: hidden;
+    border-radius: 8px;
+    aspect-ratio: 1 / 1;
+    display: block;
+}
+
+.palette-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.palette-item img:hover {
+    transform: scale(1.05);
+}
+
+.palette-cta {
+    margin-bottom: 2rem;
+}
+
+.palette-cta h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.palette-cta p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.palette-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.palette-caption {
+    margin-top: 0.5rem;
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 2.25rem;
+}
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.85rem;
+}
+
+li {
+    font-size:1.7rem;
+}
+
+.cta-section {
+    position: relative;
+    margin: 80px auto;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.cta-image {
+    width: 100%;
+    max-width: 520px;   /* чтобы не выглядело как баннер 2007 года */
+    margin: 24px auto;
+    display: block;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.cta-section .blur {
+    text-align: center;
+    padding: 60px 40px;
+}
+
+.title-icon {
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
+}
+
+.arrow {
+    width: 3em;
+    height: 3em;
+    object-fit: contain;
+}
+h1, p, li {
+    max-width: 100%;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.grid {
+    display: grid;
+    gap: 24px;
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
